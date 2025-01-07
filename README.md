@@ -58,7 +58,7 @@ Exemples d’applications :
 - Classification de courriers électroniques (spam ou non).  
 - Segmentation de clients pour des campagnes marketing.  
 
-### Quand utiliser le Machine Learning ?  
+### Quand utiliser le Deep Learning ?  
 
 Le Deep Learning est préférable lorsque :
 
