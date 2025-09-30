@@ -20,15 +20,15 @@ class Perceptron(BaseEstimator, ClassifierMixin):
         self,
         max_iter=1000,
         learning_rate=0.01,
-        penalty=None,             # None | 'l2'
-        alpha=0.0001,             # force L2 (si penalty='l2')
+        penalty=None,         
+        alpha=0.0001,            
         shuffle=True,
         random_state=None,
-        tol=1e-4,                 # tolérance d'amélioration (pas un nb d'erreurs)
-        patience=5,               # nb d'époques sans amélioration autorisées
+        tol=1e-4,              
+        patience=5,              
         warm_start=False,
         with_bias=True,
-        multi_class="ovr"         # 'ovr' ou 'multinomial'
+        multi_class="ovr"       
     ):
         self.max_iter = max_iter
         self.learning_rate = learning_rate
@@ -93,7 +93,7 @@ class Perceptron(BaseEstimator, ClassifierMixin):
 
         # Encodage binaire interne en {-1, +1} si binaire
         if n_classes == 2 and self.multi_class != "multinomial":
-            y_mapped = np.where(y == self.classes_[1], 1, -1)  # classe positive = classes_[1]
+            y_mapped = np.where(y == self.classes_[1], 1, -1)  
         else:
             # multi-classe : garder y indexé 0..K-1
             inv_map = {c: i for i, c in enumerate(self.classes_)}
@@ -173,7 +173,6 @@ class Perceptron(BaseEstimator, ClassifierMixin):
             if acc > best_score + self.tol:
                 best_score = acc
                 epochs_no_improve = 0
-                # on pourrait aussi snapshot les meilleurs poids
                 best_coef_ = self.coef_.copy()
                 best_intercept_ = None if self.intercept_ is None else self.intercept_.copy()
             else:
