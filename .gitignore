@@ -13,3 +13,10 @@ olivier-contributions/scripts/.ipynb_checkpoints/perceptron_pedagogique-checkpoi
 olivier-contributions/scripts/.ipynb_checkpoints/boruta_analysis-checkpoint.py
 olivier-contributions/notebooks/.ipynb_checkpoints/03_acp-checkpoint.ipynb
 .ipynb_checkpoints/README-checkpoint.md
+
+# Python/Notebooks
+**/.ipynb_checkpoints/**
+__pycache__/
+*.pyc
+.venv/
+env/
